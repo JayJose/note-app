@@ -5,6 +5,9 @@ import { Container } from "react-bootstrap";
 import { NewNote } from "./NewNote";
 
 function App() {
+  const [notes, setNotes] = useLocalStorage("NOTES", []);
+  const [tags, setTags] = useLocalStorage("TAGS", []);
+
   return (
     <Container className="my-4">
       <Routes>
